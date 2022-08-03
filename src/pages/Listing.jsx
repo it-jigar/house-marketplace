@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { Navigation, Pagination } from 'swiper'
@@ -46,7 +47,7 @@ function Listing() {
         navigation
         slidesPerView={1}
         pagination={{ clickable: true }}
-        //className={StyleSheet.swiperSlideDiv}
+        loop
       >
         {listing.imageUrls.map((url, index) => (
           <SwiperSlide key={index}>
